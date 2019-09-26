@@ -2,6 +2,7 @@ import React, { Component } from 'react'
 import './App.scss'
 
 import Navbar from './components/layout/Navbar'
+import Users from './components/users/Users'
 
 class App extends Component {
   render() {
@@ -9,10 +10,8 @@ class App extends Component {
       <>
         <Navbar />
         <section className='section'>
-          <h1 className='title'>Hello World</h1>
-          <h2 className='subtitle'>What's up?</h2>
-          <div className='control'>
-            <input type='text' className='input' />
+          <div className='container'>
+            <Users />
           </div>
         </section>
       </>

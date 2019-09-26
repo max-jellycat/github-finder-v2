@@ -1,3 +1,6 @@
+// Custom variables
+
+// Colors
 $red: #e84118;
 $blue: #00a8ff;
 $pale-blue: #487eb0;
@@ -8,7 +11,14 @@ $gray-darker: #2f3640;
 $gray-light: #dcdde1;
 $gray-lighter: #f5f6fa;
 
-// Bulma override
+// Other
+$pm-size-small: .5rem;
+$pm-size: 1rem;
+$pm-size-medium: 2rem;
+$pm-size-large: 3rem;
+
+// Bulma initial variables override
+
 $family-sans-serif: "Nunito",
 sans-serif;
 $grey-dark: $gray;
@@ -22,11 +32,12 @@ $link: $pale-blue;
 $radius: 10px;
 $body-color: $dark;
 
-// Update some of Bulma's component variables
+// Bulma's component variables override
+
+// Forms
 $control-border-width: 2px;
 $input-background-color: $gray-lighter;
 $input-border-color: transparent;
 $input-shadow: none;
-
 $input-focus-border-color: $primary;
 $input-focus-box-shadow-size: none;

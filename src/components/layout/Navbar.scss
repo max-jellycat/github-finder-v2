@@ -1,0 +1,9 @@
+.navbar {
+  &-brand {
+    font-weight: $weight-bold;
+
+    i {
+      margin-right: $pm-size-small;
+    }
+  }
+}
