@@ -1,0 +1,32 @@
+$red: #e84118;
+$blue: #00a8ff;
+$pale-blue: #487eb0;
+$yellow: #fbc531;
+$green: #4cd137;
+$gray: #718093;
+$gray-darker: #2f3640;
+$gray-light: #dcdde1;
+$gray-lighter: #f5f6fa;
+
+// Bulma override
+$family-sans-serif: "Nunito",
+sans-serif;
+$grey-dark: $gray;
+$grey-light: $gray-light;
+$primary: $blue;
+$dark: $gray-darker;
+$danger: $red;
+$success: $green;
+$warning: $yellow;
+$link: $pale-blue;
+$radius: 10px;
+$body-color: $dark;
+
+// Update some of Bulma's component variables
+$control-border-width: 2px;
+$input-background-color: $gray-lighter;
+$input-border-color: transparent;
+$input-shadow: none;
+
+$input-focus-border-color: $primary;
+$input-focus-box-shadow-size: none;
