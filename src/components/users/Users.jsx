@@ -5,7 +5,6 @@ import UserItem from './UserItem'
 import Spinner from '../layout/Spinner'
 
 const Users  = ({ loading, users }) => {
-    loading = true
     return (
       <>
         {loading ? (
