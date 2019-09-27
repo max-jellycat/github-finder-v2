@@ -12,6 +12,7 @@ class App extends Component {
         <section className='section'>
           <div className='container'>
             <Users />
+            <button className="button is-success is-rounded">Test</button>
           </div>
         </section>
       </>

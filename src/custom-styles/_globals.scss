@@ -1,6 +1,8 @@
 a.button,
 button.button {
   border-radius: $radius-round;
+
+  @include transition(all .3s ease);
 }
 
 .card {

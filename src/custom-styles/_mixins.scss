@@ -2,15 +2,51 @@
   .is-lighter {
     &.is-primary {
       background-color: $blueberry-light;
+      &.is-outlined {
+        border-color: $blueberry-light;
+        color: $blueberry-light;
+        &:hover {
+          background-color: $blueberry-light;
+          border-color: $blueberry-light;
+          color: #fff;
+        }
+      }
     }
     &.is-danger {
       background-color: $raspberry-light;
+      &.is-outlined {
+        border-color: $raspberry-light;
+        color: $raspberry-light;
+        &:hover {
+          background-color: $raspberry-light;
+          border-color: $raspberry-light;
+          color: #fff;
+        }
+      }
     }
     &.is-warning {
       background-color: $banana-light;
+      &.is-outlined {
+        border-color: $banana-light;
+        color: $banana-light;
+        &:hover {
+          background-color: $banana-light;
+          border-color: $banana-light;
+          color: #fff;
+        }
+      }
     }
     &.is-success {
       background-color: $kiwi-light;
+      &.is-outlined {
+        border-color: $kiwi-light;
+        color: $kiwi-light;
+        &:hover {
+          background-color: $kiwi-light;
+          border-color: $kiwi-light;
+          color: #fff;
+        }
+      }
     }
   }
 }
@@ -19,26 +55,54 @@
   .is-lightest {
     &.is-primary {
       background-color: $blueberry-lighter;
+      &.is-outlined {
+        border-color: $blueberry-lighter;
+        color: $blueberry-lighter;
+        &:hover {
+          background-color: $blueberry-lighter;
+          border-color: $blueberry-lighter;
+          color: #fff;
+        }
+      }
     }
     &.is-danger {
       background-color: $raspberry-lighter;
+      &.is-outlined {
+        border-color: $raspberry-lighter;
+        color: $raspberry-lighter;
+        &:hover {
+          background-color: $raspberry-lighter;
+          border-color: $raspberry-lighter;
+          color: #fff;
+        }
+      }
     }
     &.is-warning {
       background-color: $banana-lighter;
+      &.is-outlined {
+        border-color: $banana-lighter;
+        color: $banana-lighter;
+        &:hover {
+          background-color: $banana-lighter;
+          border-color: $banana-lighter;
+          color: #fff;
+        }
+      }
     }
     &.is-success {
       background-color: $kiwi-lighter;
+      &.is-outlined {
+        border-color: $kiwi-lighter;
+        color: $kiwi-lighter;
+        &:hover {
+          background-color: $kiwi-lighter;
+          border-color: $kiwi-lighter;
+          color: #fff;
+        }
+      }
     }
   }
 }
-
-// @mixin is-outlined($bgColor) {
-//   &.is-outlined {
-//     background-color: transparent;
-//     color: $bgColor;
-//     border: 1px solid $bgColor;
-//   }
-// }
 
 @mixin is-transparent($bgColor) {
   &.is-transparent {
