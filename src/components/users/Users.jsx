@@ -1,38 +1,29 @@
-import React, { Component } from 'react'
-import UserItem from './UserItem'
+import React from 'react'
+import PropTypes from 'prop-types'
 
-class Users extends Component {
-  state = {
-    users: [
-      {
-        login: 'mojombo',
-        id: 1,
-        avatar_url: 'https://avatars0.githubusercontent.com/u/1?v=4',
-        html_url: 'https://github.com/mojombo'
-      },
-      {
-        login: 'defunkt',
-        id: 2,
-        avatar_url: 'https://avatars0.githubusercontent.com/u/2?v=4',
-        html_url: 'https://github.com/defunkt'
-      },
-      {
-        login: 'pjhyett',
-        id: 3,
-        avatar_url: 'https://avatars0.githubusercontent.com/u/3?v=4',
-        html_url: 'https://github.com/pjhyett'
-      }
-    ]
-  }
-  render() {
+import UserItem from './UserItem'
+import Spinner from '../layout/Spinner'
+
+const Users  = ({ loading, users }) => {
+    loading = true
     return (
-      <div className='users'>
-        {this.state.users.map(user => (
-          <UserItem key={user.id} user={user} />
-        ))}
-      </div>
+      <>
+        {loading ? (
+          <Spinner />
+        ) : (
+          <div className='users'>
+            {users.map(user => (
+              <UserItem key={user.id} user={user} />
+            ))}
+          </div>
+        )}
+      </>
     )
-  }
+}
+
+Users.propTypes = {
+  loading: PropTypes.bool.isRequired,
+  users: PropTypes.array.isRequired,
 }
 
 export default Users
