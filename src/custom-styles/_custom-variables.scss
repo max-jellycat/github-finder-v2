@@ -75,13 +75,17 @@ $black: $coal;
 $light: $cloud-light;
 $dark: $licorice-dark;
 $info: $blueberry-light;
-$link: $blueberry-light;
+$link: $primary-text-dark;
 $warning: $banana;
 
 // Bulma's component variables override
 
 $body-overflow-y: auto;
-$body-background-color: $cloud-light;
+$body-color: $dark;
+// $body-background-color: $cloud-light;
+
+$text: $dark;
+$text-light: $cloud-dark;
 
 $message-radius: $radius-small;
 $message-body-radius: $radius-small;
@@ -99,6 +103,8 @@ $input-focus-color: $primary;
 $input-shadow: none;
 $input-focus-border-color: $primary;
 $input-focus-box-shadow-size: none;
+$link-visited: $primary;
+$link-hover: $primary;
 
 // Buttons
 $button-padding-horizontal: 1.6rem;

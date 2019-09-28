@@ -1,3 +1,7 @@
+h2.subtitle {
+  color: $primary;
+}
+
 a.button,
 button.button,
 input.button {
@@ -37,4 +41,8 @@ article.notification {
     background-color: $success-background-light;
     color: $success-text-dark;
   }
+}
+
+.lead {
+  font-weight: 700;
 }
