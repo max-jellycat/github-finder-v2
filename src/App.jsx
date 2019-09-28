@@ -4,6 +4,8 @@ import axios from 'axios'
 
 import './App.scss'
 
+import GithubState from './context/github/GithubState'
+
 import Navbar from './components/layout/Navbar'
 import Alert from './components/layout/Alert'
 import Users from './components/users/Users'
@@ -60,7 +62,7 @@ const App  = () => {
   }
   
   return (
-    <>
+    <GithubState>
       <Router>
         <Navbar />
         <main className='section'>
@@ -90,7 +92,7 @@ const App  = () => {
           </div>
         </main>
       </Router>
-    </>
+    </GithubState>
   )
 }
 
