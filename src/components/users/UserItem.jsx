@@ -14,7 +14,7 @@ const UserItem = ({ user: { login, avatar_url, html_url } }) => {
           />
         </figure>
         <h3 className='title is-size-5 has-text-weight-bold pt'>{login}</h3>
-        <a href={html_url} className='button is-primary is-lighter has-shadow my-1'>
+        <a href={html_url} className='button is-primary has-shadow my-1'>
           <span className='icon'>
             <i className='fas fa-eye'></i>
           </span>

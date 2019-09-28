@@ -30,9 +30,16 @@ const Navbar  = ({ title, icon }) => {
 
       <div id='navbar' className='navbar-menu'>
         <div className='navbar-end'>
-          <a className='navbar-item'>Home</a>
-
-          <a className='navbar-item'>Documentation</a>
+          <div className='navbar-item'>
+            <div className='buttons'>
+              <a className='button is-primary is-outlined'>
+                <span className='icon'>
+                  <i className='fas fa-code-branch'></i>
+                </span>
+                <span>Fork me on Github</span>
+              </a>
+            </div>
+          </div>
         </div>
       </div>
     </nav>

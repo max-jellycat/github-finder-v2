@@ -1,18 +1,27 @@
 import React, { Component } from 'react'
+import PropTypes from 'prop-types'
 
 class Search extends Component {
   state = {
     text: ''
   }
 
+  static propTypes = {
+    searchUsers: PropTypes.func.isRequired,
+    clearUsers: PropTypes.func.isRequired,
+    showClear: PropTypes.bool.isRequired,
+  }
+
   handleChange = e => this.setState({ [e.target.name]: e.target.value })
 
   handleSubmit = e => {
     e.preventDefault()
-    console.log(this.state.text)
+    this.props.searchUsers(this.state.text)
+    this.setState({ text: '' })
   }
 
   render() {
+    const { showClear, clearUsers } = this.props;
     const { text } = this.state
     return (
       <section className='search mb-2'>
@@ -31,7 +40,7 @@ class Search extends Component {
             <p className='control'>
               <button
                 type='submit'
-                className='button is-success is-lighter has-shadow'
+                className='button is-success has-shadow'
               >
                 <span className='icon'>
                   <i className='fas fa-search'></i>
@@ -41,6 +50,17 @@ class Search extends Component {
             </p>
           </div>
         </form>
+        {showClear && (
+          <button
+            className='button is-light has-shadow ml'
+            onClick={clearUsers}
+          >
+            <span className='icon'>
+              <i className='fas fa-times'></i>
+            </span>
+            <span>Clear</span>
+          </button>
+        )}
       </section>
     )
   }

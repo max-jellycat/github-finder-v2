@@ -12,7 +12,8 @@ input.button {
 }
 
 .input {
-  caret-color: $blueberry;
+  caret-color: $primary;
+  @include transition(all .3s ease);
 }
 
 .card {

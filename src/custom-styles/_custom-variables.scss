@@ -1,37 +1,37 @@
 // Custom variables
 
 // Colors
-$raspberry: #D33131;
-$raspberry-light: #E53B3B;
-$raspberry-lighter: #FF9797;
+$raspberry: #E53B3B;
+$raspberry-dark: #D33131;
+$raspberry-light: #FF9797;
 
-$blueberry: #1CB0F6;
-$blueberry-light: #14D4F4;
-$blueberry-lighter: #BCE9FF;
+$blueberry: #14D4F4;
+$blueberry-dark: #1CB0F6;
+$blueberry-light: #BCE9FF;
 
-$banana: #FFB020;
-$banana-light: #FFC300;
-$banana-lighter: #FFF277;
+$banana: #FFC300;
+$banana-dark: #FFB020;
+$banana-light: #FFF277;
 
-$kiwi: #7AC70C;
-$kiwi-light: #8EE000;
-$kiwi-lighter: #BFF199;
+$kiwi: #8EE000;
+$kiwi-dark: #7AC70C;
+$kiwi-light: #BFF199;
 
-$jelly: #8549BA;
-$jelly-light: #A560EB;
-$jelly-lighter: #CA94FF;
+$jelly: #A560EB;
+$jelly-dark: #8549BA;
+$jelly-light: #CA94FF;
 
-$pumpkin: #FA811B;
-$pumpkin-light: #FF9400;
-$pumpkin-lighter: #FFCF7A;
+$pumpkin: #FF9400;
+$pumpkin-dark: #FA811B;
+$pumpkin-light: #FFCF7A;
 
-$licorice: #4C4C4C;
-$licorice-light: #777777;
-$licorice-lighter: #AFAFAF;
+$licorice: #777777;
+$licorice-dark: #4C4C4C;
+$licorice-light: #AFAFAF;
 
-$cloud: #CFCFCF;
-$cloud-light: #DDDDDD;
-$cloud-lighter: #F0F0F0;
+$cloud: #DDDDDD;
+$cloud-dark: #CFCFCF;
+$cloud-light: #F0F0F0;
 
 $creme: #FFFFFF;
 $coal: #000000;
@@ -55,28 +55,32 @@ $family-sans-serif: "Nunito",
 sans-serif;
 
 // Colors
-$grey-dark: $licorice;
-$grey-light: $cloud;
+$grey-dark: $cloud;
+$grey-light: $cloud-light;
 $primary: $blueberry;
 $danger: $raspberry;
 $success: $kiwi;
 $white: $creme;
 $black: $coal;
-$light: $cloud-lighter;
-$dark: $licorice;
+$light: $cloud-light;
+$dark: $licorice-dark;
 $info: $blueberry-light;
 $link: $blueberry-light;
 $warning: $banana;
 
 // Bulma's component variables override
 
+$body-overflow-y: auto;
+$body-background-color: $cloud-light;
+
 // Forms
 $control-border-width: 2px;
 $input-background-color: $white;
-$input-border-color: $cloud-light;
-$input-focus-color: $blueberry-light;
+$input-border-color: $cloud;
+$input-hover-border-color: $cloud-dark;
+$input-focus-color: $primary;
 $input-shadow: none;
-$input-focus-border-color: $blueberry-light;
+$input-focus-border-color: $primary;
 $input-focus-box-shadow-size: none;
 
 // Buttons

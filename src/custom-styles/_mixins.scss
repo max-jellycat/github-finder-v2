@@ -51,52 +51,52 @@
   }
 }
 
-@mixin is-lightest() {
-  .is-lightest {
+@mixin is-darker() {
+  .is-darker {
     &.is-primary {
-      background-color: $blueberry-lighter;
+      background-color: $blueberry-dark;
       &.is-outlined {
-        border-color: $blueberry-lighter;
-        color: $blueberry-lighter;
+        border-color: $blueberry-dark;
+        color: $blueberry-dark;
         &:hover {
-          background-color: $blueberry-lighter;
-          border-color: $blueberry-lighter;
+          background-color: $blueberry-dark;
+          border-color: $blueberry-dark;
           color: #fff;
         }
       }
     }
     &.is-danger {
-      background-color: $raspberry-lighter;
+      background-color: $raspberry-dark;
       &.is-outlined {
-        border-color: $raspberry-lighter;
-        color: $raspberry-lighter;
+        border-color: $raspberry-dark;
+        color: $raspberry-dark;
         &:hover {
-          background-color: $raspberry-lighter;
-          border-color: $raspberry-lighter;
+          background-color: $raspberry-dark;
+          border-color: $raspberry-dark;
           color: #fff;
         }
       }
     }
     &.is-warning {
-      background-color: $banana-lighter;
+      background-color: $banana-dark;
       &.is-outlined {
-        border-color: $banana-lighter;
-        color: $banana-lighter;
+        border-color: $banana-dark;
+        color: $banana-dark;
         &:hover {
-          background-color: $banana-lighter;
-          border-color: $banana-lighter;
+          background-color: $banana-dark;
+          border-color: $banana-dark;
           color: #fff;
         }
       }
     }
     &.is-success {
-      background-color: $kiwi-lighter;
+      background-color: $kiwi-dark;
       &.is-outlined {
-        border-color: $kiwi-lighter;
-        color: $kiwi-lighter;
+        border-color: $kiwi-dark;
+        color: $kiwi-dark;
         &:hover {
-          background-color: $kiwi-lighter;
-          border-color: $kiwi-lighter;
+          background-color: $kiwi-dark;
+          border-color: $kiwi-dark;
           color: #fff;
         }
       }
@@ -118,21 +118,21 @@
 }
 
 @mixin box-shadow() {
-  &.has-shadow {
+  &.has-shadow, &.has-shadow:focus {
     &.is-success {
-      box-shadow: 0 4px 0 $kiwi-lighter;
+      box-shadow: 0 4px 0 $kiwi-light;
     }
     &.is-primary {
-      box-shadow: 0 4px 0 $blueberry-lighter;
+      box-shadow: 0 4px 0 $blueberry-light;
     }
     &.is-danger {
-      box-shadow: 0 4px 0 $raspberry-lighter;
+      box-shadow: 0 4px 0 $raspberry-light;
     }
     &.is-warning {
-      box-shadow: 0 4px 0 $banana-lighter;
+      box-shadow: 0 4px 0 $banana-light;
     }
     &.is-dark {
-      box-shadow: 0 4px 0 $licorice-lighter;
+      box-shadow: 0 4px 0 $licorice-light;
     }
     &.is-light {
       box-shadow: 0 4px 0 $cloud;
