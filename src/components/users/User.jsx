@@ -1,53 +1,47 @@
-import React, { Component } from 'react'
+import React, { useEffect } from 'react'
 import PropTypes from 'prop-types'
 import { Link } from 'react-router-dom'
 
 import Spinner from '../layout/Spinner'
 import Repos from '../repos/Repos'
 
-class User extends Component {
-  static propTypes = {
-    loading: PropTypes.bool.isRequired,
-    user: PropTypes.object.isRequired,
-    repos: PropTypes.array.isRequired,
-    getUser: PropTypes.func.isRequired,
-    getRepos: PropTypes.func.isRequired,
-  }
+const User = ({ user, repos, loading, getUser, getRepos, match }) => {
 
-  componentDidMount() {
-    this.props.getUser(this.props.match.params.login)
-    this.props.getRepos(this.props.match.params.login)
-  }
+  useEffect(() => {
+    getUser(match.params.login)
+    getRepos(match.params.login)
+    // eslint-disable-next-line
+  }, [])
 
-  render() {
-    const { user: { 
-      name,
-      avatar_url,
-      location,
-      company,
-      bio,
-      blog,
-      login,
-      html_url,
-      followers,
-      following,
-      public_repos,
-      public_gists,
-      hireable
-    }, repos, loading} = this.props
+  const {
+    name,
+    avatar_url,
+    location,
+    company,
+    bio,
+    blog,
+    login,
+    html_url,
+    followers,
+    following,
+    public_repos,
+    public_gists,
+    hireable
+  } = user
 
-    return (
-      <section className='user'>
-        <Link to='/' className='button is-dark has-shadow mb-2'>
-          <span className='icon'>
-            <i className='fas fa-arrow-left'></i>
-          </span>
-          <span>Back</span>
-        </Link>
-        <div className='user card'>
-          {loading ? (
-            <Spinner />
-          ) : (
+  return (
+    <section className='user'>
+      <Link to='/' className='button is-dark has-shadow mb-2'>
+        <span className='icon'>
+          <i className='fas fa-arrow-left'></i>
+        </span>
+        <span>Back</span>
+      </Link>
+      {loading ? (
+        <Spinner />
+      ) : (
+        <>
+          <div className='user card'>
             <div className='card-content is-flex'>
               <div className='user-avatar mr-2'>
                 <figure className='image is-128x128 mb-1'>
@@ -124,12 +118,20 @@ class User extends Component {
                 </div>
               </div>
             </div>
-          )}
-        </div>
-        <Repos repos={repos} />
-      </section>
-    )
-  }
+          </div>
+          <Repos repos={repos} />
+        </>
+      )}
+    </section>
+  )
+}
+
+User.propTypes = {
+  loading: PropTypes.bool.isRequired,
+  user: PropTypes.object.isRequired,
+  repos: PropTypes.array.isRequired,
+  getUser: PropTypes.func.isRequired,
+  getRepos: PropTypes.func.isRequired,
 }
 
 export default User
