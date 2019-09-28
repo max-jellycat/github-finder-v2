@@ -1,7 +1,10 @@
-import React, { useState } from 'react'
+import React, { useState, useContext } from 'react'
 import PropTypes from 'prop-types'
 
-const Search  = ({ showClear, clearUsers, setAlert, searchUsers }) => {
+import GithubContext from '../../context/github/githubContext'
+
+const Search  = ({ showClear, clearUsers, setAlert }) => {
+  const githubContext = useContext(GithubContext)
   const [text, setText] = useState('')
 
   const handleChange = e => setText(e.target.value)
@@ -11,7 +14,7 @@ const Search  = ({ showClear, clearUsers, setAlert, searchUsers }) => {
     if (text === '') {
       setAlert('Please enter some text', 'danger')
     } else {
-      searchUsers(text)
+      githubContext.searchUsers(text)
       setText('')
     }
     
@@ -59,7 +62,6 @@ const Search  = ({ showClear, clearUsers, setAlert, searchUsers }) => {
 }
 
 Search.propTypes = {
-  searchUsers: PropTypes.func.isRequired,
   clearUsers: PropTypes.func.isRequired,
   showClear: PropTypes.bool.isRequired,
   setAlert: PropTypes.func.isRequired,
