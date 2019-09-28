@@ -46,7 +46,17 @@ $lighter: 40;
 $lightest: 80;
 
 $radius: 10px;
+$radius-small: 4px;
 $radius-round: 290486px;
+
+$primary-background-light: lighten($blueberry-light, 12%);
+$primary-text-dark: $blueberry-dark;
+$danger-background-light: lighten($raspberry-light, 12%);
+$danger-text-dark: $raspberry-dark;
+$warning-background-light: lighten($banana-light, 12%);
+$warning-text-dark: $banana-dark;
+$success-background-light: lighten($kiwi-light, 12%);
+$success-text-dark: $kiwi-dark;
 
 // Bulma initial variables override
 
@@ -72,6 +82,13 @@ $warning: $banana;
 
 $body-overflow-y: auto;
 $body-background-color: $cloud-light;
+
+$message-radius: $radius-small;
+$message-body-radius: $radius-small;
+$message-body-padding: 1rem 1.25rem;
+
+$notification-radius: $radius;
+$notification-padding: 1rem 2rem 1rem 1.5rem;
 
 // Forms
 $control-border-width: 2px;

@@ -10,14 +10,20 @@ class Search extends Component {
     searchUsers: PropTypes.func.isRequired,
     clearUsers: PropTypes.func.isRequired,
     showClear: PropTypes.bool.isRequired,
+    setAlert: PropTypes.func.isRequired,
   }
 
   handleChange = e => this.setState({ [e.target.name]: e.target.value })
 
   handleSubmit = e => {
     e.preventDefault()
-    this.props.searchUsers(this.state.text)
-    this.setState({ text: '' })
+    if (this.state.text === '') {
+      this.props.setAlert('Please enter some text', 'danger')
+    } else {
+      this.props.searchUsers(this.state.text)
+      this.setState({ text: '' })
+    }
+    
   }
 
   render() {
@@ -32,7 +38,7 @@ class Search extends Component {
                 type='text'
                 className='input'
                 name='text'
-                placeholder='Search users'
+                placeholder='Search users...'
                 value={text}
                 onChange={this.handleChange}
               />
