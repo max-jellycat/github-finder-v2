@@ -22,6 +22,7 @@
 
 // Users
 @import './components/users/Users';
+@import './components/users/Search';
 
 // Mixins
 @include is-lighter();

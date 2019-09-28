@@ -45,6 +45,9 @@ $pm-size-large: 3rem;
 $lighter: 40;
 $lightest: 80;
 
+$radius: 10px;
+$radius-round: 290486px;
+
 // Bulma initial variables override
 
 // Fonts
@@ -65,21 +68,18 @@ $info: $blueberry-light;
 $link: $blueberry-light;
 $warning: $banana;
 
-// Misc
-$radius: 10px;
-$radius-round: 290486px;
-
 // Bulma's component variables override
 
 // Forms
 $control-border-width: 2px;
-$input-background-color: $grey-light;
-$input-border-color: transparent;
+$input-background-color: $white;
+$input-border-color: $cloud-light;
+$input-focus-color: $blueberry-light;
 $input-shadow: none;
-$input-focus-border-color: $primary;
+$input-focus-border-color: $blueberry-light;
 $input-focus-box-shadow-size: none;
 
 // Buttons
-$button-padding-horizontal: 1.4rem;
+$button-padding-horizontal: 1.6rem;
 
 $new-colors: ("white": $white, "black": $black, "light": $light, "dark": $dark, "primary": $primary, "danger": $danger, "warning": $warning, "success": $success, "info": $info, "link": $link);

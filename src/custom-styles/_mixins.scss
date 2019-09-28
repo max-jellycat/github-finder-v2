@@ -117,6 +117,29 @@
   }
 }
 
+@mixin box-shadow() {
+  &.has-shadow {
+    &.is-success {
+      box-shadow: 0 4px 0 $kiwi-lighter;
+    }
+    &.is-primary {
+      box-shadow: 0 4px 0 $blueberry-lighter;
+    }
+    &.is-danger {
+      box-shadow: 0 4px 0 $raspberry-lighter;
+    }
+    &.is-warning {
+      box-shadow: 0 4px 0 $banana-lighter;
+    }
+    &.is-dark {
+      box-shadow: 0 4px 0 $licorice-lighter;
+    }
+    &.is-light {
+      box-shadow: 0 4px 0 $cloud;
+    }
+  }
+}
+
 @mixin transition($args...) {
   -webkit-transition: $args;
   -moz-transition: $args;

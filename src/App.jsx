@@ -5,6 +5,7 @@ import './App.scss'
 
 import Navbar from './components/layout/Navbar'
 import Users from './components/users/Users'
+import Search from './components/users/Search'
 
 class App extends Component {
   state = {
@@ -29,11 +30,12 @@ class App extends Component {
     return (
       <>
         <Navbar />
-        <section className='section'>
+        <main className='section'>
           <div className='container'>
+            <Search />
             <Users loading={loading} users={users} />
           </div>
-        </section>
+        </main>
       </>
     )
   }

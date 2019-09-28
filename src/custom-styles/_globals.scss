@@ -1,8 +1,18 @@
 a.button,
-button.button {
-  border-radius: $radius-round;
-
+button.button,
+input.button {
+  border-radius: $radius;
+  font-weight: bold;
   @include transition(all .3s ease);
+  @include box-shadow;
+
+  &.is-outlined {
+    box-shadow: none;
+  }
+}
+
+.input {
+  caret-color: $blueberry;
 }
 
 .card {
