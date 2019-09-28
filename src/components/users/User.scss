@@ -3,6 +3,10 @@
     color: $primary;
   }
 
+  h3,h4 {
+    font-weight: $weight-semibold;
+  }
+
   &-avatar {
     display: flex;
     flex-direction: column;
@@ -14,5 +18,27 @@
       display: flex;
       align-items: center;
     }
+  }
+
+  &-repos {
+    &--item {
+      &:not(:last-child) {
+        margin-bottom: $pm-size;
+      }
+      &-wrapper {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+      }
+      &-header {
+        display: flex;
+        align-items: center;
+        flex-grow: 1;
+      }
+    }
+  }
+
+  .tag:not(:last-child) {
+    margin-right: $pm-size-small;
   }
 }

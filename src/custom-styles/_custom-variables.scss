@@ -49,11 +49,11 @@ $radius: 10px;
 $radius-small: 4px;
 $radius-round: 290486px;
 
-$primary-background-light: lighten($blueberry-light, 12%);
+$primary-background-light: lighten($blueberry-light, 8%);
 $primary-text-dark: $blueberry-dark;
-$danger-background-light: lighten($raspberry-light, 12%);
+$danger-background-light: lighten($raspberry-light, 16%);
 $danger-text-dark: $raspberry-dark;
-$warning-background-light: lighten($banana-light, 12%);
+$warning-background-light: lighten($banana-light, 16%);
 $warning-text-dark: $banana-dark;
 $success-background-light: lighten($kiwi-light, 12%);
 $success-text-dark: $kiwi-dark;
@@ -74,7 +74,7 @@ $white: $creme;
 $black: $coal;
 $light: $cloud-light;
 $dark: $licorice-dark;
-$info: $blueberry-light;
+$info: $jelly;
 $link: $primary-text-dark;
 $warning: $banana;
 
