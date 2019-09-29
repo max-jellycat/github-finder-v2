@@ -10,15 +10,19 @@ const Users  = () => {
 
   return (
     <>
-      {loading ? (
-        <Spinner />
-      ) : (
-        <div className='users'>
-          {users.map(user => (
-            <UserItem key={user.id} user={user} />
-          ))}
-        </div>
-      )}
+    {users.length > 0 ? (
+      <>
+        {loading ? (
+          <Spinner />
+        ) : (
+          <div className='users'>
+            {users.map(user => (
+              <UserItem key={user.id} user={user} />
+            ))}
+          </div>
+        )}
+      </>
+    ) : <p className="lead has-text-centered is-size-4">No users found... try another search!</p>}
     </>
   )
 }
