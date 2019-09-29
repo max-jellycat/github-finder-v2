@@ -1,9 +1,10 @@
-import React, { useState } from 'react'
+import React from 'react'
 import { BrowserRouter as Router, Route, Switch } from 'react-router-dom'
 
 import './App.scss'
 
 import GithubState from './context/github/GithubState'
+import AlertState from './context/alert/AlertState'
 
 import Navbar from './components/layout/Navbar'
 import Alert from './components/layout/Alert'
@@ -13,43 +14,33 @@ import Search from './components/users/Search'
 import About from './components/pages/About'
 
 const App  = () => {
-  const [alert, setAlert] = useState(null)
-
-  const createAlert = (message, type) => {
-    setAlert({ message, type })
-  }
-
-  const clearAlert = () => {
-    setAlert(null)
-  }
-  
   return (
     <GithubState>
-      <Router>
-        <Navbar />
-        <main className='section'>
-          <div className='container'>
-            <Alert alert={alert} clearAlert={clearAlert} />
-            <Switch>
-              <Route
-                exact
-                path='/'
-                render={props => (
-                  <>
-                    <Search
-                      setAlert={createAlert}
-                    />
-                    <Users />
-                  </>
-                )}
-              />
-              <Route exact path="/about" component={About} />
-              <Route exact path="/user/:login" component={User} />
-              )} />
-            </Switch>
-          </div>
-        </main>
-      </Router>
+      <AlertState>
+        <Router>
+          <Navbar />
+          <main className='section'>
+            <div className='container'>
+              <Alert />
+              <Switch>
+                <Route
+                  exact
+                  path='/'
+                  render={props => (
+                    <>
+                      <Search />
+                      <Users />
+                    </>
+                  )}
+                />
+                <Route exact path='/about' component={About} />
+                <Route exact path='/user/:login' component={User} />
+                )} />
+              </Switch>
+            </div>
+          </main>
+        </Router>
+      </AlertState>
     </GithubState>
   )
 }
